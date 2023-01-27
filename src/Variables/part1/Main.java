@@ -1,4 +1,4 @@
-package Variables;
+package Variables.part1;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +10,6 @@ public class Main {
         task6();
         task7();
         task8();
-
     }
 
     public static void task1() {
@@ -21,9 +20,10 @@ public class Main {
         System.out.println(dog);
         System.out.println(cat);
         System.out.println(paper);
+        System.out.println();
     }
 
-    public static void task2 () {
+    public static void task2() {
         System.out.println("Задача 2");
         var dog = 8.0 + 4;
         var cat = 3.6 + 4;
@@ -31,6 +31,7 @@ public class Main {
         System.out.println(dog);
         System.out.println(cat);
         System.out.println(paper);
+        System.out.println();
     }
 
     public static void task3() {
@@ -41,7 +42,7 @@ public class Main {
         System.out.println(dog);
         System.out.println(cat);
         System.out.println(paper);
-
+        System.out.println();
     }
 
     public static void task4() {
@@ -52,7 +53,7 @@ public class Main {
         System.out.println(friend);
         friend = friend / 7;
         System.out.println(friend);
-
+        System.out.println();
     }
 
     public static void task5() {
@@ -65,7 +66,7 @@ public class Main {
         System.out.println(frog);
         frog = frog + 4;
         System.out.println(frog);
-
+        System.out.println();
     }
 
     public static void task6() {
@@ -74,8 +75,9 @@ public class Main {
         var secondBoxer = 82.7;
         var totalWeight = firstBoxer + secondBoxer;
         System.out.println("Total weight of boxers is " + totalWeight);
-        var weightDifference =(firstBoxer - secondBoxer) * -1 ;
+        var weightDifference = (firstBoxer - secondBoxer) * -1;
         System.out.println("Weight difference of boxers is " + weightDifference);
+        System.out.println();
     }
 
     public static void task7() {
@@ -86,6 +88,7 @@ public class Main {
         System.out.println("Weight difference of boxers is " + weightDifferenceWithMinus);
         var weightDifference = secondBoxer % firstBoxer;
         System.out.println("Weight difference of boxers is " + weightDifference);
+        System.out.println();
     }
 
     public static void task8() {
@@ -99,8 +102,10 @@ public class Main {
         var newTotalWorkingHours = allEmployees * employeesWorkingHours;
         System.out.println("Если в компании работает " + allEmployees + " человек, то всего "
                 + newTotalWorkingHours + " часов работы может быть поделено между сотрудниками");
-
-
-    }
+        System.out.println();
 
     }
+
+
+
+}
