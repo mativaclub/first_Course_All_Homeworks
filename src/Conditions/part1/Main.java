@@ -85,20 +85,16 @@ public class Main {
         System.out.println("Задача 6");
         int trainCarriage = 102;
         int sit = 60;
-        int passengers = 1;
-        if (passengers < sit) {
+        int stand = trainCarriage - sit; // 42
+        if (sit < 60) {
             System.out.println("There are sitting places available");
-        } else if (passengers >= sit && passengers < trainCarriage) {
+        } else if (stand < 42) {
             System.out.println("There are standing places available");
         } else {
             System.out.println("The train is full");
         }
         System.out.println();
     }
-//     if (passengers > 0 && passengers < sittingPlaces) {
-//         System.out.println("В вагоне есть " + (sittingPlaces - passengers) + " сидячих мест");
-//     } else if (passengers >= sittingPlaces && passengers < totalPlaces) {
-//         System.out.println("В вагоне есть " + (totalPlaces - passengers) + " стоячих мест");
 
     public static void task7() {
         System.out.println("Задача 7");
