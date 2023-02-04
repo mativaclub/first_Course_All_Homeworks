@@ -10,6 +10,9 @@ public class Main {
         task6();
         task7();
         task8();
+        task9();
+        task10();
+        task11();
 
     }
 
@@ -150,5 +153,37 @@ public class Main {
         System.out.println();
     }
 
+    public static void task9() {
+        System.out.println("Задача 9");
+        int a = 12;
+        int b = 27;
+        int c = 44;
+        int d = 15;
+        int e = 9;
+        int result = a * (b + (c - d * e));
+        result = result * (-1);
+        System.out.println(result);
+        System.out.println();
+    }
+
+    public static void task10() {
+        System.out.println("Задача 10");
+        int a = 5;
+        int b = 7;
+        a = a + b; //  5 + 7 = 12
+        b = a - b; // 12 - 7 = 5
+        a = a - b; // 12 - 5 = 7
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println();
+    }
+
+    public static void task11() {
+        System.out.println("Задача 11");
+        int a = 256;
+        int b = (a % 100) / 10;
+        System.out.println(b);
+
+    }
 
 }
