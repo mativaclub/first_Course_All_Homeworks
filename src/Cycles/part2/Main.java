@@ -13,6 +13,7 @@ public class Main {
         task8();
         task9();
         task10();
+
     }
 
 
@@ -56,8 +57,8 @@ public class Main {
             population = population + ((population / 1000) * average);
             System.out.println("Год " + i + ", численность населения составляет " + population);
         }
-        System.out.println();
     }
+
 
     public static void task4() {
         System.out.println("Задача 4");
@@ -137,6 +138,7 @@ public class Main {
             } else {
                 System.out.println(i + ": ");
             }
+
         }
         System.out.println();
     }

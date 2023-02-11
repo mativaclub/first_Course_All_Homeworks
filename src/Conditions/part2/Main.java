@@ -128,11 +128,11 @@ public class Main {
         if (age <= 23) {
             basePercent = basePercent + 0.01;
         } else if (age <= 30) {
-            basePercent = basePercent + 0.05;
+            basePercent = basePercent + 0.005;
         } else if (salary > 80_000) {
-            basePercent = basePercent - 0.07;
+            basePercent = basePercent - 0.007;
         }
-        double monthlyPayment = (wantedSum * basePercent) / duration;
+        double monthlyPayment = wantedSum + (wantedSum * basePercent) / duration;
         if (monthlyPayment < maxMonthlyPayment) {
             System.out.println("Максимальный платеж при ЗП " + salary + " равен " + maxMonthlyPayment
                     + " рублей. Платеж по кредиту " + monthlyPayment + " рублей. Одобрено");
