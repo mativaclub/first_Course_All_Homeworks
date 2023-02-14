@@ -87,7 +87,10 @@ public class Main {
 
     private static void task1() {
         System.out.println("Задача 1");
-        int[] arrayInt = new int[]{1, 2, 3};
+        int[] arrayInt = new int[];
+        arrayInt[0] = 1;
+        arrayInt[1] = 2;
+        arrayInt[2] = 3;
         double[] arrayDouble = {1.57, 7.654, 9.986};
         int[] arr = {3, 2, 1};
         System.out.println();
