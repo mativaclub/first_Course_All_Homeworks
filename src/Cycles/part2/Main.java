@@ -53,10 +53,16 @@ public class Main {
         int average = birth - death;
         int currentYear = 2022;
         int tenYearsLater = currentYear + 10;
-        for (int i = currentYear; i <= tenYearsLater; i++) {
+        while (currentYear <= tenYearsLater) {
             population = population + ((population / 1000) * average);
-            System.out.println("Год " + i + ", численность населения составляет " + population);
+            System.out.println("Год " + currentYear + ", численность населения составляет " + population);
+            currentYear++;
         }
+//        for (int i = currentYear; i <= tenYearsLater; i++) {
+//            population = population + ((population / 1000) * average);
+//            System.out.println("Год " + i + ", численность населения составляет " + population);
+//        }
+
     }
 
 
