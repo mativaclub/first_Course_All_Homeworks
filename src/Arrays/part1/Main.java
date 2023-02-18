@@ -87,7 +87,7 @@ public class Main {
 
     private static void task1() {
         System.out.println("Задача 1");
-        int[] arrayInt = new int[];
+        int[] arrayInt = new int[]{};
         arrayInt[0] = 1;
         arrayInt[1] = 2;
         arrayInt[2] = 3;

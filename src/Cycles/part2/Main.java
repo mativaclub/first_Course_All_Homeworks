@@ -3,14 +3,14 @@ package Cycles.part2;
 public class Main {
     public static void main(String[] args) {
 
-        task1();
-        task2();
-        task3();
-        task4();
-        task5();
-        task6();
-        task7();
-        task8();
+//        task1();
+//        task2();
+//        task3();
+//        task4();
+//        task5();
+//        task6();
+//        task7();
+//        task8();
         task9();
         task10();
 
@@ -161,5 +161,13 @@ public class Main {
             System.out.print(" " + next);
         }
         System.out.println();
+        int a = 0;
+        int b = 1;
+        for (int i = 1; i <= 5; i++) {
+            System.out.print(a + " " + b + " ");
+            a = a + b;
+            b = a + b;
+        }
+
     }
 }
