@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-
-        task1();
-        task2();
-        task3();
-        task4();
+//
+//        task1();
+//        task2();
+//        task3();
+//        task4();
         task5();
         task6();
         task7();
@@ -34,7 +34,7 @@ public class Main {
     private static void task2() {
         System.out.println("Задача 2");
         int[] arr = generateRandomArray();
-        int min = 0;
+        int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         int month = 30;
         for (int i = 0; i < month; i++) {
@@ -52,14 +52,14 @@ public class Main {
     private static void task3() {
         System.out.println("Задача 3");
         int[] arr = generateRandomArray();
-        float sum = 0;
-        float month = 30;
-        float average = 0;
+        double sum = 0;
+        double month = 30;
+        double average = 0;
         for (int i = 0; i < month; i++) {
             sum = sum + arr[i];
             average = sum / month;
         }
-        System.out.println("Средняя сумма трат за месяц составила " + average + " рублей");
+        System.out.printf("Средняя сумма трат за месяц составила %.0f рублей", average);
         System.out.println();
     }
 
@@ -149,14 +149,32 @@ public class Main {
             if (sum == -2) {
                 System.out.println(num[leftIndex] + " + " + num[rightIndex] + " = " + sum);
                 break;
-            } else if (sum > -2) {
-                rightIndex--;
-            } else {
-                leftIndex++;
+            }
+            rightIndex--;
+            leftIndex++;
+        }
+
+        System.out.println("another version");
+
+        int[] arr = new int[]{-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+        Arrays.sort(arr);
+        int numb = 0;
+        System.out.println(Arrays.toString(arr));
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] < 0) {
+                for (int j = 9; j > i; j--) {
+                    numb = arr[i] + arr[j];
+                    if (numb == -2) {
+                        System.out.println("итерация " + i + "_" + j + ": " + arr[i] + "+(" + arr[j] + ")= " + numb);
+                    }
+
+                }
             }
 
-            System.out.println();
         }
+        System.out.println();
+
+
 //        int[] num = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
 //        Arrays.sort(num);
 //        System.out.println(Arrays.toString(num));
@@ -196,23 +214,23 @@ public class Main {
         }
 
 
-//        int[] nums = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
-//        Arrays.sort(nums);
-//        System.out.println(Arrays.toString(nums));
-//        int sum;
-//        int leftIndex = 0;
-//        int rightIndex = nums.length - 1;
-//        for (int i = 0; i < nums.length; i++) {
-//            sum = nums[leftIndex] + nums[rightIndex];
-//            if (sum == -2) {
-//                System.out.println(nums[leftIndex++] + " + " +nums[rightIndex--] + " = " + sum);
-//            } else if (sum > -2) {
-//                leftIndex++;
-//            } else {
-//                rightIndex--;
-//            }
-//            System.out.println();
-//        }
+        int[] nums = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+        Arrays.sort(nums);
+        System.out.println(Arrays.toString(nums));
+        int sum;
+        int leftIndex = 0;
+        int rightIndex = nums.length - 1;
+        for (int i = 0; i < nums.length; i++) {
+            sum = nums[leftIndex] + nums[rightIndex];
+            if (sum == -2) {
+                System.out.println(nums[leftIndex++] + " + " + nums[rightIndex--] + " = " + sum);
+            } else if (sum > -2) {
+                leftIndex++;
+            } else {
+                rightIndex--;
+            }
+            System.out.println();
+        }
 
 
         System.out.println("Задача 9, версия 2");
