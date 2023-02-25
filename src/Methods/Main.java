@@ -17,7 +17,7 @@ public class Main {
         cardDelivery(95);
 
 //        System.out.println("Задача 4");
-        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        int[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         reverseName(reverseFullName);
 
 //        System.out.println("Задача 5");
@@ -33,13 +33,18 @@ public class Main {
         System.out.println("Задача 6");
         double sum = 0;
         double month = 30;
+        double average = getAverage(arr, sum, month);
+        System.out.printf("Средняя сумма трат за месяц составила %.0f рублей", average);
+        System.out.println();
+        return average;
+    }
+
+    private static double getAverage(int[] arr, double sum, double month) {
         double average = 0;
         for (int i = 0; i < month; i++) {
             sum = sum + arr[i];
             average = sum / month;
         }
-        System.out.printf("Средняя сумма трат за месяц составила %.0f рублей", average);
-        System.out.println();
         return average;
     }
 
@@ -63,13 +68,33 @@ public class Main {
                 break;
             }
         }
+
+        char[] charStr = findDuplicates.toCharArray();
+        for (int i = 0; i < charStr.length - 1; i++) {
+//            for (int j = i + 1; j < charStr.length; j++) {
+//                if (charStr[i] == charStr[j]) {
+            if (charStr[i] == charStr[i + 1]) {
+                System.out.println("В строке есть повторящийся символ - " + charStr[i]);
+                return;
+            }
+        }
+
+        System.out.println("There are no duplicates in the string");
+
         System.out.println();
     }
 
-    public static void reverseName(char[] reverseFullName) {
+    public static void reverseName(int[] arr) {
         System.out.println("Задача 4");
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            System.out.print(reverseFullName[i]);
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i]);
+        }
+        System.out.println();
+
+        for (int i = 0; i < arr.length / 2; i++) {
+            int tmp = arr[i];
+            arr[i] = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = tmp;
         }
         System.out.println();
     }
