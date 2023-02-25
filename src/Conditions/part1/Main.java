@@ -95,10 +95,7 @@ public class Main {
         }
         System.out.println();
     }
-//     if (passengers > 0 && passengers < sittingPlaces) {
-//         System.out.println("В вагоне есть " + (sittingPlaces - passengers) + " сидячих мест");
-//     } else if (passengers >= sittingPlaces && passengers < totalPlaces) {
-//         System.out.println("В вагоне есть " + (totalPlaces - passengers) + " стоячих мест");
+
 
     public static void task7() {
         System.out.println("Задача 7");
