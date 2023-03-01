@@ -9,6 +9,9 @@ public class Library {
         this.books = new Book[size];
     }
 
+    public Book[] getBooks() {
+        return books;
+    }
 
     public boolean addBook(Book newBook) {
         for (int i = 0; i < books.length; i++) {
