@@ -14,7 +14,7 @@ public class Main {
         book1.setYearOfPublication(2008);
 
         System.out.println("Book title is: " + book1.getTitle() + ", " +
-                book1.getAuthorName() + " , year of publication is " + book1.getYearOfPublication());
+                book1.getAuthorName().getAuthorName() + " " + book1.getAuthorName().getAuthorSurname() + " , year of publication is " + book1.getYearOfPublication());
         System.out.println("Book title is: " + book2.getTitle() + ", " +
                 book2.getAuthorName() + " , year of publication is " + book2.getYearOfPublication());
 

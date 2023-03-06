@@ -24,7 +24,10 @@ public class Book {
     }
 
     public void setYearOfPublication(int yearOfPublication) {
-        this.yearOfPublication = yearOfPublication;
+        if (yearOfPublication > 0) {
+            this.yearOfPublication = yearOfPublication;
+        }
+
     }
 
     @Override
