@@ -1,6 +1,4 @@
-package Course_1;
-
-import java.util.Arrays;
+package Course_1.hard;
 
 public class Main {
 
@@ -38,27 +36,30 @@ public class Main {
 
     public static void minSalary(Employee[] employee) {
         int min = Integer.MAX_VALUE;
+        int employeeWithMinSalary = 0;
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null && employee[i].getSalary() < min) {
                 min = employee[i].getSalary();
+                employeeWithMinSalary = employee[i].getId();
             }
-//            System.out.println("Сумма минимальной зарплаты в месяц составляет " + min +
-//                    " и это сотрудник " + employee[i].getId());
-//            System.out.println();
-//            break;
         }
-        System.out.println("Сумма минимальной зарплаты в месяц составляет " + min);
+        System.out.println("Сумма минимальной зарплаты в месяц составляет " + min +
+                " и это сотрудник " + employeeWithMinSalary);
+        System.out.println();
     }
 
     public static void maxSalary(Employee[] employee) {
         int max = Integer.MIN_VALUE;
+        int employeeWithMaxSalary = 0;
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null && employee[i].getSalary() > max) {
                 max = employee[i].getSalary();
+                employeeWithMaxSalary = employee[i].getId();
             }
         }
-        System.out.println("Сумма максимальной зарплаты в месяц составляет " + max);
-
+        System.out.println("Сумма максимальной зарплаты в месяц составляет " + max +
+                " и это сотрудник " + employeeWithMaxSalary);
+        System.out.println();
     }
 
     public static void averageSalary(Employee[] employee) {
@@ -119,7 +120,19 @@ public class Main {
         printAllEmployees(employee);
 
 
-
+//    1. Создать класс EmployeeBook.
+//    2. Перенести хранилище сотрудников в него (массив), закрыть к нему доступ извне (сделать приватным).
+//    3. Все статические методы по работе с массивом перенести в этот класс и сделать нестатическими.
+//    4. Добавить несколько новых методов:
+//        1. Добавить нового сотрудника (создаем объект, заполняем поля, кладем в массив).
+//        Нужно найти свободную ячейку в массиве и добавить нового сотрудника в нее. Искать нужно
+//        всегда с начала, так как возможно добавление в ячейку удаленных ранее сотрудников.
+//        2. Удалить сотрудника (находим сотрудника по Ф. И. О. и/или id, обнуляем его ячейку в массиве).
+//    5. Изменить сотрудника (получить сотрудника по Ф. И. О., модернизировать его запись):
+//        1. Изменить зарплату.
+//        2. Изменить отдел.
+//        Придумать архитектуру. Сделать или два метода, или один, но продумать его.
+//    6. Получить Ф. И. О. всех сотрудников по отделам (напечатать список отделов и их сотрудников).
 
 
     }

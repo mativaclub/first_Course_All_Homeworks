@@ -1,4 +1,4 @@
-package Course_1;
+package Course_1.easy;
 
 import java.util.Objects;
 
@@ -6,11 +6,10 @@ public class Employee {
     private final String fullName;
     private int department;
     private int salary;
-    private int id; // Добавить статическую переменную-счетчик, которая будет отвечать за id.
-    private static int counter = 1; //поле id проставляется из счетчика, а затем счетчик увеличивает свое значение.
+    private int id;
+    private static int counter = 1;
 
-    //    6.все поля должны передавать через конструктор (кроме id) и заполняться в нем
-    //    (включая id, который нужно получить из счетчика).
+
     public Employee(String fullName, int department, int salary) {
         this.fullName = fullName;
         this.department = department;
