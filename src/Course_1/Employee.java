@@ -46,9 +46,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    //    public static int getId() {
-//        return 0;
-//    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

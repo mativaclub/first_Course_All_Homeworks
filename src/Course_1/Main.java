@@ -8,8 +8,7 @@ public class Main {
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] == null) {
                 employee[i] = newEmployee;
-            } else {
-                System.out.println("the list is full");
+                break;
             }
         }
     }
@@ -18,14 +17,15 @@ public class Main {
         System.out.println("List of all employees");
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null) {
-                System.out.println(employees[i].getFullName() + " " + employees[i].getDepartment() + " " +
-                        employees[i].getSalary() + " " + employees[i].getCounter());
+                System.out.println("Full Name is: " + employees[i].getFullName() + ", department is: " +
+                        employees[i].getDepartment() + ", salary is: " +
+                        employees[i].getSalary() + ", id is: " + employees[i].getCounter());
             }
         }
+        System.out.println();
     }
 
-    public static int monthlySalaryExpenses(Employee[] employee) {
-        System.out.println("Посчитать сумму затрат на зарплаты в месяц");
+    public static void monthlySalaryExpenses(Employee[] employee) {
         int sum = 0;
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
@@ -33,10 +33,10 @@ public class Main {
             }
         }
         System.out.println("Сумма затрат на зарплаты в месяц составляет " + sum);
-        return sum;
+        System.out.println();
     }
 
-    public static int minSalary(Employee[] employee) {
+    public static void minSalary(Employee[] employee) {
         System.out.println("Найти сотрудника с минимальной зарплатой");
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < employee.length; i++) {
@@ -45,13 +45,12 @@ public class Main {
             }
             System.out.println("Сумма минимальной зарплаты в месяц составляет " + min +
                     " и это сотрудник " + employee[i].getCounter());
+            System.out.println();
+            break;
         }
-
-        return min;
     }
 
-    public static int maxSalary(Employee[] employee) {
-        System.out.println("Найти сотрудника с максимальной зарплатой");
+    public static void maxSalary(Employee[] employee) {
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null && employee[i].getSalary() > max) {
@@ -59,12 +58,12 @@ public class Main {
             }
             System.out.println("Сумма минимальной зарплаты в месяц составляет " + max +
                     " и это сотрудник " + employee[i].getCounter());
+            System.out.println();
+            break;
         }
-        return max;
     }
 
-    public static float averageSalary(Employee[] employee) {
-        System.out.println("Подсчитать среднее значение зарплат");
+    public static void averageSalary(Employee[] employee) {
         float sum = 0;
         float average = 0;
         for (int i = 0; i < employee.length; i++) {
@@ -73,13 +72,12 @@ public class Main {
             }
             average = sum / employee.length;
             System.out.println("Средняя сумма затрат на зарплаты в месяц составляет " + average);
+            System.out.println();
+            break;
         }
-        return average;
-
     }
 
     public static void printAllEmployees(Employee[] employee) {
-        System.out.println("Получить Ф. И. О. всех сотрудников");
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
                 System.out.println("Ф. И. О. сотрудникa " + employee[i].getFullName() + " ");
