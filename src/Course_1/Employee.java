@@ -6,8 +6,8 @@ public class Employee {
     private final String fullName;
     private int department;
     private int salary;
-    private static int id; // Добавить статическую переменную-счетчик, которая будет отвечать за id.
-    private int counter = 0; //поле id проставляется из счетчика, а затем счетчик увеличивает свое значение.
+    private int id; // Добавить статическую переменную-счетчик, которая будет отвечать за id.
+    private static int counter = 1; //поле id проставляется из счетчика, а затем счетчик увеличивает свое значение.
 
     //    6.все поля должны передавать через конструктор (кроме id) и заполняться в нем
     //    (включая id, который нужно получить из счетчика).
@@ -30,7 +30,7 @@ public class Employee {
         return salary;
     }
 
-    public static int getId() {
+    public int getId() {
         return id;
     }
 
