@@ -78,19 +78,98 @@ public class Main {
 
     //    5. Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра.
     public static void salaryIndexing(Employee[] employee, int department, int salaryIndex) {
-        int employeeSalary = 0;
-        String employeeName = null;
+        int employeeSalary;
+        String employeeName;
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null && department == employee[i].getDepartment()) {
                 employee[i].setSalary((employee[i].getSalary() + (employee[i].getSalary() * salaryIndex) / 100));
                 employeeSalary = employee[i].getSalary();
                 employeeName = employee[i].getFullName();
+                System.out.println("Зарплата сотрудника " + employeeName + " после индексации равно "
+                        + employeeSalary);
             }
         }
-        System.out.println("Зарплата сотрудника " + employeeName + " после индексации равно " + employeeSalary);
+        System.out.println();
     }
 
 
+    // 1. Всех сотрудников с зарплатой меньше числа (вывести id, Ф. И. О. и зарплатой в консоль).
+    public static void employeesWithSalaryLessThenNumber(Employee[] employee, int number) {
+        for (int i = 0; i < employee.length; i++) {
+            if (employee[i] != null && employee[i].getSalary() < number) {
+                System.out.println("Зарплата сотрудников с номером " + employee[i].getId() + ", именем։ " +
+                        employee[i].getFullName() + ", зарплатой: " + employee[i].getSalary()
+                        + " меньше чем данное число " + number);
+            }
+        }
+        System.out.println();
+    }
+
+
+    //2. Всех сотрудников с зарплатой больше (или равно) числа (вывести id, Ф. И. О. и зарплатой в консоль).
+    public static void employeesWithSalaryMoreThenNumber(Employee[] employee, int number) {
+        for (int i = 0; i < employee.length; i++) {
+            if (employee[i] != null && employee[i].getSalary() >= number) {
+                System.out.println("Зарплата сотрудников с номером " + employee[i].getId() + ", именем։ " +
+                        employee[i].getFullName() + ", зарплатой: " + employee[i].getSalary()
+                        + " больше или равно чем данное число " + number);
+            }
+        }
+        System.out.println();
+    }
+
+
+    //Вопрос по 3 части
+//
+//public class  EmployeeBook {
+//   private Employee[] employees ;
+//
+//    public EmployeeBook() {
+//        this.employees = new Employee[10];
+//    }
+//
+//
+//    public void addEmployee(Employee[] employees,Employee NewEmployee) {
+//        for (int i = 0; i < employees.length; i++) {
+//            if (employees[i] == null) {
+//                employees[i] = NewEmployee;
+//                break;
+//            } else {
+//                System.out.println("Phone book is full. Adding a new contact is restricted.");
+//            }
+//        }
+//    }
+//Но в main не могу занести сотрудников
+//
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        EmployeeBook employeeBook = new EmployeeBook();
+//
+//        employeeBook.addEmployee(?????,new Employee(1, "Ivanov", "Ivan", "Ivanovich", 110_000));
+//        employeeBook.addEmployee(new Employee(2, "Vasiliev", "Vasil", "Vasilievich", 80_000));
+//первый аргумен не влазит ))
+//
+//Хелп ))
+//
+//
+//Илья Савинов
+//09.03.23 20:56
+//Сергей, привет! Не нужно передавать массив как параметр метода addEmployee, он уже есть в класса
+// EmployeeBook, можно работать с ним
+//
+//public void addEmployee(Employee NewEmployee) {
+//        for (int i = 0; i < employees.length; i++) {
+//            if (employees[i] == null) {
+//                employees[i] = NewEmployee;
+//                break;
+//            }
+//}
+//
+//
+//Тогда в методе main можно передавать сотрудника
+//
+//employeeBook.addEmployee(new Employee(2, "Vasiliev", "Vasil", "Vasilievich", 80_000));
     public static void main(String[] args) {
 
         Employee[] employee = new Employee[10];
@@ -118,13 +197,8 @@ public class Main {
 
         salaryIndexing(employee, 2, 100);
 
+        employeesWithSalaryLessThenNumber(employee, 50000);
 
-//    3. Получить в качестве параметра число и найти:
-//        1. Всех сотрудников с зарплатой меньше числа (вывести id, Ф. И. О. и зарплатой
-//        в консоль).
-//        2. Всех сотрудников с зарплатой больше (или равно) числа (вывести id, Ф. И. О.
-//        и зарплатой в консоль).
-
-
+        employeesWithSalaryMoreThenNumber(employee, 50000);
     }
 }
