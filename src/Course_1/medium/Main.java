@@ -119,57 +119,6 @@ public class Main {
     }
 
 
-    //Вопрос по 3 части
-//
-//public class  EmployeeBook {
-//   private Employee[] employees ;
-//
-//    public EmployeeBook() {
-//        this.employees = new Employee[10];
-//    }
-//
-//
-//    public void addEmployee(Employee[] employees,Employee NewEmployee) {
-//        for (int i = 0; i < employees.length; i++) {
-//            if (employees[i] == null) {
-//                employees[i] = NewEmployee;
-//                break;
-//            } else {
-//                System.out.println("Phone book is full. Adding a new contact is restricted.");
-//            }
-//        }
-//    }
-//Но в main не могу занести сотрудников
-//
-//public class Main {
-//
-//    public static void main(String[] args) {
-//        EmployeeBook employeeBook = new EmployeeBook();
-//
-//        employeeBook.addEmployee(?????,new Employee(1, "Ivanov", "Ivan", "Ivanovich", 110_000));
-//        employeeBook.addEmployee(new Employee(2, "Vasiliev", "Vasil", "Vasilievich", 80_000));
-//первый аргумен не влазит ))
-//
-//Хелп ))
-//
-//
-//Илья Савинов
-//09.03.23 20:56
-//Сергей, привет! Не нужно передавать массив как параметр метода addEmployee, он уже есть в класса
-// EmployeeBook, можно работать с ним
-//
-//public void addEmployee(Employee NewEmployee) {
-//        for (int i = 0; i < employees.length; i++) {
-//            if (employees[i] == null) {
-//                employees[i] = NewEmployee;
-//                break;
-//            }
-//}
-//
-//
-//Тогда в методе main можно передавать сотрудника
-//
-//employeeBook.addEmployee(new Employee(2, "Vasiliev", "Vasil", "Vasilievich", 80_000));
     public static void main(String[] args) {
 
         Employee[] employee = new Employee[10];

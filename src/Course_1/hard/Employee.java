@@ -6,8 +6,9 @@ public class Employee {
     private final String fullName;
     private int department;
     private int salary;
-    private final int id;
+    private int id;
     private static int counter = 1;
+
 
     public Employee(String fullName, int department, int salary) {
         this.fullName = fullName;
@@ -61,11 +62,10 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee " +
-                "full name is " + fullName +
-                ", department is " + department +
-                ", salary is " + salary +
-                ", id is " + counter;
+        return "Employee name: " + fullName +
+                ", department: " + department +
+                ", salary: " + salary +
+                ", id: " + counter;
     }
 }
 
