@@ -1,6 +1,7 @@
 package Course_1.hard;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class EmployeeBook {
 
@@ -160,6 +161,7 @@ public class EmployeeBook {
         System.out.println();
         System.out.println("Get all employees by departments");
         for (int i = 0; i < employees.length; i++) {
+            Arrays.sort(employees, 0, employees.length, Comparator.comparing(Employee::getDepartment));
             System.out.println("Department: " + employees[i].getDepartment() +
                     ", Name: " + employees[i].getFullName());
         }
