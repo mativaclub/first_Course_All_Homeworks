@@ -1,5 +1,7 @@
 package Course_1.hard;
 
+import java.util.Arrays;
+
 public class EmployeeBook {
 
 
@@ -136,23 +138,34 @@ public class EmployeeBook {
 
     public void changeEmployeeDepartment(String employee, int salary, int department) {
         for (int i = 0; i < employees.length; i++) {
+            employees[i].setDepartment(department);
             if (employees[i] != null && employees[i].getFullName().equals(employee)) {
-                employees[i] = employees[i].setSalary(salary);
+                employees[i].setDepartment(department);
                 changeEmployeeSalary(employee, salary);
-                System.out.println("The employee department is now " + department +
-                        " and employee salary now is " + salary);
             }
         }
+        System.out.println("The employee " + employee + " department now is " + department +
+                " and salary now is " + salary);
     }
 
     public void changeEmployeeSalary(String employee, int salary) {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getFullName().equals(employee)) {
-                employees[i] = employees[i].setSalary(salary);
+                employees[i].setSalary(salary);
             }
         }
     }
 
+    public void getAllEmployeesByDepartment() {
+        System.out.println();
+        System.out.println("Get all employees by departments");
+        for (int i = 0; i < employees.length; i++) {
+            System.out.println("Department: " + employees[i].getDepartment() +
+                    ", Name: " + employees[i].getFullName());
+        }
+        System.out.println();
+    }
 
-//    6. Получить Ф. И. О. всех сотрудников по отделам (напечатать список отделов и их сотрудников).
+
+    //    6. Получить Ф. И. О. всех сотрудников по отделам (напечатать список отделов и их сотрудников).
 }

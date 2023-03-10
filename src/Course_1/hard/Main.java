@@ -33,7 +33,6 @@ public class Main {
 
         employeeBook.employeesWithSalaryMoreThenNumber(50000);
 
-
         employeeBook.deleteEmployee(1);
 
         employeeBook.listOfEmployees(1);
@@ -41,6 +40,8 @@ public class Main {
         employeeBook.addEmployee(new Employee("Richard Branson", 1, 75000));
 
         employeeBook.listOfEmployees(1);
+
+        employeeBook.getAllEmployeesByDepartment();
 
         employeeBook.changeEmployeeDepartment("Richard Branson", 50000, 2);
     }
