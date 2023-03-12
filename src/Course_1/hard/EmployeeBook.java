@@ -139,7 +139,6 @@ public class EmployeeBook {
 
     public void changeEmployeeDepartment(String employee, int salary, int department) {
         for (int i = 0; i < employees.length; i++) {
-            employees[i].setDepartment(department);
             if (employees[i] != null && employees[i].getFullName().equals(employee)) {
                 employees[i].setDepartment(department);
                 changeEmployeeSalary(employee, salary);
@@ -168,6 +167,18 @@ public class EmployeeBook {
         System.out.println();
     }
 
-
+    public String printDepartment() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i <= 5; i++) {
+            sb.append("Отдел " + i + ": ");
+            for (int j = 0; j < employees.length; j++) {
+                if (employees[j].getDepartment() == i) {
+                    sb.append(employees[j].getFullName()).append(" ");
+                }
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
     //    6. Получить Ф. И. О. всех сотрудников по отделам (напечатать список отделов и их сотрудников).
 }
